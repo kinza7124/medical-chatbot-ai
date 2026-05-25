@@ -74,7 +74,7 @@ export function SocialProof() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="self-stretch grid grid-cols-4 md:grid-cols-8 gap-8 md:gap-12 justify-items-center px-4"
+        className="self-stretch grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-6 md:gap-12 justify-items-center px-4"
       >
         {techLogos.map((tech) => (
           <motion.div

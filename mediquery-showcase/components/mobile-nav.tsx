@@ -82,9 +82,9 @@ export function MobileNav() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.4, ease: [0.33, 1, 0.68, 1] }}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-md lg:hidden"
+          className="fixed bottom-4 left-3 right-3 z-50 w-auto sm:left-1/2 sm:right-auto sm:-translate-x-1/2 sm:w-[95%] sm:max-w-md lg:hidden"
         >
-          <nav className="flex items-center justify-around p-2 bg-[#0c0f0e]/80 backdrop-blur-xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+          <nav className="grid grid-cols-5 items-center gap-1 p-1.5 bg-[#0c0f0e]/80 backdrop-blur-xl border border-white/10 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             {navItems.map((item) => {
               const isActive = activeTab === item.name
               return (
@@ -92,7 +92,7 @@ export function MobileNav() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href, item.name)}
-                  className="relative flex flex-col items-center justify-center py-2 px-3 transition-colors"
+                  className="relative flex min-w-0 flex-col items-center justify-center px-1 py-2 transition-colors"
                 >
                   {isActive && (
                     <motion.div
@@ -103,13 +103,13 @@ export function MobileNav() {
                   )}
                   <item.icon
                     className={cn(
-                      "w-5 h-5 transition-all duration-300",
+                      "w-4 h-4 sm:w-5 sm:h-5 transition-all duration-300",
                       isActive ? "text-primary scale-110" : "text-muted-foreground"
                     )}
                   />
                   <span
                     className={cn(
-                      "text-[10px] font-medium mt-1 transition-all duration-300",
+                      "text-[9px] sm:text-[10px] font-medium mt-1 transition-all duration-300 truncate max-w-full",
                       isActive ? "text-primary opacity-100" : "text-muted-foreground opacity-70"
                     )}
                   >

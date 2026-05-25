@@ -10,13 +10,13 @@ import { CheckCircle2, ShieldCheck, Activity, Github, ArrowRight } from "lucide-
 export function HeroSection() {
   return (
     <section
-      className="flex flex-col items-center text-center relative mx-auto rounded-3xl overflow-hidden my-6 py-0 px-4
+      className="flex flex-col items-center text-center relative mx-auto rounded-3xl overflow-hidden my-6 py-0 px-3 sm:px-4
          w-full h-auto min-h-[500px] md:w-[1220px] md:min-h-[600px] lg:min-h-[810px] md:px-0 bg-[#0c0f0e]"
     >
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-primary-dark/10 rounded-full blur-[100px]" />
+        <div className="absolute top-[-10%] right-[-10%] hidden md:block w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-[-10%] left-[-10%] hidden md:block w-[400px] h-[400px] bg-primary-dark/10 rounded-full blur-[100px]" />
         
         {/* SVG Grid Overlay */}
         <svg className="absolute inset-0 w-full h-full opacity-[0.15]" xmlns="http://www.w3.org/2000/svg">
@@ -35,12 +35,12 @@ export function HeroSection() {
       </div>
 
       {/* Animated content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full pt-24 md:pt-32 lg:pt-40 pb-20">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20 sm:pt-24 md:pt-32 lg:pt-40 pb-28 sm:pb-20">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-6 md:space-y-8 max-w-4xl px-4"
+          className="space-y-6 md:space-y-8 max-w-4xl px-3 sm:px-4"
         >
           {/* Enhanced Badge */}
           <motion.div
@@ -60,7 +60,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-white text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight"
+            className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight"
           >
             MediQuery <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-light to-primary-dark animate-gradient">
@@ -83,7 +83,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-wrap justify-center gap-6 md:gap-12 pt-4"
+            className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-12 pt-4"
           >
             <div className="flex items-center gap-2.5 group cursor-default">
               <div className="p-2 rounded-lg bg-green-500/10 group-hover:bg-green-500/20 transition-colors">
@@ -118,10 +118,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="pt-8"
+            className="pt-6 sm:pt-8"
           >
             <Link href="https://github.com/kinza7124/Medi-Query" target="_blank" rel="noopener noreferrer">
-              <Button className="relative z-10 bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-7 rounded-full font-bold text-lg shadow-[0_0_20px_rgba(120,252,214,0.3)] hover:shadow-[0_0_30px_rgba(120,252,214,0.5)] transition-all duration-300 group overflow-hidden">
+              <Button className="relative z-10 w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-10 py-4 sm:py-7 rounded-full font-bold text-base sm:text-lg shadow-[0_0_20px_rgba(120,252,214,0.3)] hover:shadow-[0_0_30px_rgba(120,252,214,0.5)] transition-all duration-300 group overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                 <Github className="w-6 h-6 mr-3" />
                 Explore on GitHub

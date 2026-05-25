@@ -13,19 +13,19 @@ export function AppShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col justify-center items-center gap-4 text-center"
+          className="flex flex-col justify-center items-center gap-4 text-center px-2 sm:px-0"
         >
-          <h2 className="text-foreground text-4xl md:text-5xl font-semibold leading-tight">
+          <h2 className="text-foreground text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
             Intelligent Medical Assistant
           </h2>
-          <p className="text-muted-foreground text-lg md:text-xl font-medium leading-relaxed max-w-[700px]">
+          <p className="text-muted-foreground text-base sm:text-lg md:text-xl font-medium leading-relaxed max-w-[700px]">
             Beautiful, responsive interface with light and dark modes. Get evidence-based medical information with
             source citations.
           </p>
         </motion.div>
 
         {/* Phone Mockups */}
-        <div className="relative flex justify-center items-center gap-8 md:gap-16 py-8">
+        <div className="relative flex flex-col sm:flex-row justify-center items-center gap-14 sm:gap-8 md:gap-16 py-8">
           {/* Floating gradient background */}
           <div className="absolute inset-0 overflow-hidden">
             <motion.div
@@ -38,7 +38,7 @@ export function AppShowcase() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px]"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[600px] sm:h-[600px] bg-primary/10 rounded-full blur-[100px]"
             />
           </div>
 
@@ -49,7 +49,7 @@ export function AppShowcase() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             whileHover={{ scale: 1.05, rotateY: -5 }}
-            className="relative z-10"
+            className="relative z-10 w-full max-w-[240px] sm:max-w-none"
           >
             <div className="relative">
               <Image
@@ -57,7 +57,7 @@ export function AppShowcase() {
                 alt="Medi-Query Light Mode - Showing asthma causes conversation"
                 width={280}
                 height={560}
-                className="rounded-[2rem] shadow-2xl shadow-black/30"
+                className="w-full h-auto rounded-[2rem] shadow-2xl shadow-black/30"
               />
               <motion.div
                 animate={{ opacity: [0.5, 1, 0.5] }}
@@ -76,7 +76,7 @@ export function AppShowcase() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
             whileHover={{ scale: 1.05, rotateY: 5 }}
-            className="relative z-10"
+            className="relative z-10 w-full max-w-[240px] sm:max-w-none"
           >
             <div className="relative">
               <Image
@@ -84,7 +84,7 @@ export function AppShowcase() {
                 alt="Medi-Query Dark Mode - Showing asthma diagnosis and treatment conversation"
                 width={280}
                 height={560}
-                className="rounded-[2rem] shadow-2xl shadow-black/30"
+                className="w-full h-auto rounded-[2rem] shadow-2xl shadow-black/30"
               />
               <motion.div
                 animate={{ opacity: [0.5, 1, 0.5] }}
@@ -103,7 +103,7 @@ export function AppShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
             { label: "Response Time", value: "<5s", icon: "lightning" },

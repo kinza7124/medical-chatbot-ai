@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export function DashboardPreview() {
   return (
-    <div className="w-[calc(100vw-32px)] md:w-[1160px] relative">
+    <div className="w-[calc(100vw-1rem)] sm:w-[calc(100vw-2rem)] md:w-[1160px] relative mx-auto">
       {/* Floating badges */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -90,7 +90,7 @@ export function DashboardPreview() {
               <div className="w-3 h-3 rounded-full bg-[#28c840]" />
             </div>
             <div className="flex-1 text-center">
-              <span className="text-xs text-gray-400 font-mono">Medical-AI-Chatbot - Visual Studio Code</span>
+              <span className="text-[10px] sm:text-xs text-gray-400 font-mono">Medical-AI-Chatbot - Visual Studio Code</span>
             </div>
           </div>
 

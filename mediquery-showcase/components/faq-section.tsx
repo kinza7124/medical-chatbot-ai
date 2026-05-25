@@ -113,7 +113,7 @@ export function FAQSection() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="w-[300px] h-[500px] absolute top-[150px] left-1/2 -translate-x-1/2 origin-top-left rotate-[-33.39deg] bg-primary/10 blur-[100px] z-0"
+        className="hidden md:block w-[300px] h-[500px] absolute top-[150px] left-1/2 -translate-x-1/2 origin-top-left rotate-[-33.39deg] bg-primary/10 blur-[100px] z-0"
       />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
